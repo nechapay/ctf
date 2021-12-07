@@ -1,0 +1,13 @@
+{
+  "verbose": true,
+  "watch": [
+    "assets",
+    "components",
+    "layouts",
+    "middleware",
+    "pages",
+    "server",
+    "store",
+    "nuxt.config.js"
+  ]
+}

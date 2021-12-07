@@ -1,0 +1,84 @@
+@import "variables";
+@import "mixins/breackpoints";
+@import "utilities/spacing";
+@import "utilities/sizes";
+@import "utilities/transitions";
+
+html {
+  font-family: $font-primary;
+  font-size: $font-size;
+  min-height: $layout-min-height;
+  min-width: $layout-min-width;
+  word-spacing: $font-word-spacing;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  @each $key, $size in $container-sizes {
+    @include media-breakpoint-down($key) {
+      max-width: $size;
+    }
+  }
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+  transition: color 200ms ease 0ms;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $accent-color;
+    text-decoration: none;
+  }
+}
+
+*:focus {
+  outline-color: $third-color;
+}
+
+// fixes
+.el-checkbox__input.is-indeterminate .el-checkbox__inner::before {
+  top: .6rem
+}
+
+.el-pagination {
+  .btn-prev,
+  .btn-next,
+  .el-pager li {
+    background: none;
+  }
+
+  .el-pager li.active {
+    color: #2851A3;
+    background-image: linear-gradient(to right, transparentize($accent-light-color, .6) -40%, transparentize($second-light-color, .6) 130%);
+    border-radius: 4px;
+  }
+
+  button:disabled {
+    background: none;
+  }
+}
+
+.el-button:focus {
+  outline-style: auto;
+  outline-color: $second-color;
+  outline-width: 5px;
+}
+
+@import "lazy-loading";
+@import "telegram";

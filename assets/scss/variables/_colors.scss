@@ -1,0 +1,19 @@
+$primary-color: #333;
+//$accent-color: #4A76A8;
+$accent-color: #2851A3;
+$second-color: #659b96;
+$third-color: #1CAC63;
+$invert-color: #f8f8f8;
+$danger-color: #A62721;
+$success-color: #2ea624;
+
+// lighten colors
+$accent-light-color: #638DE1;
+$second-light-color: #54DEC7;
+$third-light-color: #56E49C;
+
+:export {
+  accentColor: $accent-color;
+  secondColor: $second-color;
+  dangerColor: $danger-color;
+}

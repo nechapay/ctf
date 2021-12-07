@@ -1,0 +1,13 @@
+{
+  "name": "savemystory",
+  "script": "./server/index.js",
+  "merge-logs": true,
+  "exec_mode": "cluster",
+  "instances": 1,
+  "log_date_format": "YYYY-DD-MM HH:mm:ss.SSS Z",
+  "env": {
+    "PM2_GRACEFUL_TIMEOUT": 4000,
+    "NODE_ENV": "production",
+    "PORT": 30103
+  }
+}

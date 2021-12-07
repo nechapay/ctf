@@ -1,0 +1,37 @@
+$layout-min-height: 500px;
+$layout-min-width: 340px;
+$layout-work-min-width: 720px;
+
+$avatar-height: 50px;
+$avatar-width: 50px;
+
+$container-sizes: (
+  xs: 100%,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+$spacer: $font-size !default;
+$spacers: () !default;
+$spacers: map-merge((
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+), $spacers);
+
+$title-space-bottom: map_get($spacers, 4);
+$text-spacing: map_get($spacers, 2);
+
+$sizes: () !default;
+$sizes: map-merge((
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%,
+  auto: auto
+), $sizes);

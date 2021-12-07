@@ -1,0 +1,8 @@
+Mongo:
+  container_name: mongo-ms2
+  restart: always
+  image: mongo:latest
+  ports:
+    - "27010:27017"
+  volumes:
+    - /srv/docker/mongodb-ms2/data:/data/db

@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+logs/*
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+.idea
+.vscode
+*.sh
+
+# temp files
+tmp/*
+
+package-lock.json

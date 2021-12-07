@@ -1,0 +1,24 @@
+.lazy-loaded {
+  /* setting a fixed width is recommended */
+  width: 100%;
+  /* nice effect as an example */
+  transition: opacity 1s ease-in;
+  opacity: .5;
+}
+
+/* applied as soon as loading starts */
+.lazy-loaded.lazy-load-progress {
+  opacity: 0;
+}
+
+/* applied as soon as loading succeeds */
+.lazy-loaded.lazy-load-success {
+  opacity: 1;
+  transition: opacity 200ms ease;
+}
+
+/* applied if loading fails */
+.lazy-loaded.lazy-load-error {
+  filter: hue-rotate(110deg);
+  border: 1px solid $accent-color;
+}
